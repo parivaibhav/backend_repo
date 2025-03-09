@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "figlet": "^1.8.0"
+    "figlet": "^1.8.0",
+    "give-me-a-joke": "^0.5.1"
   }
 }
