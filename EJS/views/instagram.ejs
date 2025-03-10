@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= username %>
+    </title>
+</head>
+
+<body>
+    <h1>This is belongs to <%= username %>
+    </h1>
+    <button>Follow</button>
+    <button>Message</button>
+    <!-- for loops -->
+    <h3>followers</h3>
+    <% for(follower of followers) { %>
+        <%= follower %>
+            <% } %>
+                <h3>Following</h3>
+                <% for(name of following) { %>
+                    <%= name %>
+                        <% } %>
+</body>
+
+</html>

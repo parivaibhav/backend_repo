@@ -1,15 +1,17 @@
 {
-  "name": "myproject",
+  "name": "ejs",
   "version": "1.0.0",
-  "description": "this is first project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "vaibhavpari",
+  "keywords": [],
+  "author": "vaibhav",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "figlet": "^1.8.0"
-  },
-  "devDependencies": {}
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
 }
