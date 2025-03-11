@@ -1,32 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("includes/head.ejs") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-    </title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-
-<body>
-    <h1>
-        <%= data.name %>
-    </h1>
-    <button>Follow</button>
-    <button>message</button>
-    <p>Followers: <%= data.followers %> &nbsp;&nbsp;Following: <%= data.following %>
-    </p>
-    <hr>
-    <p>posts: <% data.posts %>
-    </p>
-
-    <% for(post of data.posts){ %>
-        <img src="<%=post.image%>" alt="" width="100">
-        <p>likes:<%= post.likes %> &nbsp;&nbsp;comments: <%= post.comments %>
+    <body>
+        <h1>
+            <%= data.name %>
+        </h1>
+        <button>Follow</button>
+        <button>message</button>
+        <p>Followers: <%= data.followers %> &nbsp;&nbsp;Following: <%= data.following %>
         </p>
-        <% } %>
+        <hr>
+        <p>posts: <% data.posts %>
+        </p>
 
-</body>
+        <% for(post of data.posts){ %>
+            <img src="<%=post.image%>" alt="" width="100">
+            <p>likes:<%= post.likes %> &nbsp;&nbsp;comments: <%= post.comments %>
+            </p>
+            <% } %>
 
-</html>
+            <%- include("includes/footer.ejs") %>
+
+                <script src="/app.js"></script>
+
+    </body>
+
+    </html>
