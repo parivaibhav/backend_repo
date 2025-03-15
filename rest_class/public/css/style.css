@@ -1,0 +1,19 @@
+h1 {
+  color: maroon;
+}
+
+.post {
+  background-color: blanchedalmond;
+  padding: 10px 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.username {
+  font-style: italic;
+}
+
+.content{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
