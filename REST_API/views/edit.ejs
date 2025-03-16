@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10%;
+        }
+
+        textarea {
+            width: 50%;
+            height: 100px;
+            margin: 10px;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/posts/<%= post.id %>?_method=PATCH" method="post">
+        <p>ID: <%= post.id %>
+        </p>
+        <h2>Username: <%= post.username %>
+        </h2>
+        <br>
+        <textarea name="content" placeholder="Write your post" id="" required><%= post.content  %></textarea><br>
+        <button type="submit">update post</button>
+    </form>
+</body>
+
+</html>
