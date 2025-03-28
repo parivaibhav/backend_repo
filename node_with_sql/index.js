@@ -114,7 +114,17 @@ app.get("/users/:id/edit", (req, res) => {  // Route to get a user by id
 app.patch("/users/:id", (req, res) => {  // Route to get a user by id
   let { id } = req.params;
   let q = `SELECT * FROM user WHERE id = '${id}'`;
-  res.send("Update user route");
+  try {
+    connection.query(q, [id], (err, results) => {
+      if (err) throw err; // Throw error to be caught by the catch block
+      let user = results[0];
+      res.send(user);
+
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Database error occurred");
+  }
 });
 
 // delete user route
