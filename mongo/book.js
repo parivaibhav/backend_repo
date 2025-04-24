@@ -25,7 +25,7 @@ const BookSchema = new Schema({
     },
     price: {
         type: Number,
-
+        min: [1, "Price is too low"],
     },
     discount: {
         type: Number,
@@ -124,15 +124,37 @@ const Book = mongoose.model("Book", BookSchema);
 //     console.log("Error saving book 5:", err);
 // })
 
-const Book7 = new Book({
+// const Book7 = new Book({
+//     title: "Marvel Ceefe",
+//     author: "Stan dsdLee",
+//     price: 1499,
+//     category: "fiction",
+//     genrics: ["action", "adventure"],
+// })
+// Book7.save().then(() => {
+//     console.log("Book 7 saved");
+// }).catch(err => {
+//     console.log("Error saving book 7:", err);
+// })
+
+// update in validation not working then use { runValidators: true }
+// Book.findByIdAndUpdate("680520d7397fde456944e731", { price: 2222 }, { runValidators: true }, { new: true }).then((result) => {
+//     console.log(result);
+// }).catch(err => {
+//     console.log("Error Updating book:", err);
+// })
+
+
+// custom validation error message
+const Book8 = new Book({
     title: "Marvel Ceefe",
     author: "Stan dsdLee",
-    price: 1499,
+    price: -19,
     category: "fiction",
     genrics: ["action", "adventure"],
 })
-Book7.save().then(() => {
-    console.log("Book 7 saved");
+Book8.save().then(() => {
+    console.log("Book 8 saved");
 }).catch(err => {
-    console.log("Error saving book 7:", err);
+    console.log("Error saving book 8:", err.errors.price.message);
 })
