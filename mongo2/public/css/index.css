@@ -17,6 +17,9 @@ body {
 }
 
 .chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #075e54;
   color: #ffffff;
   padding: 10px 15px;
@@ -85,6 +88,18 @@ button {
 .chat-container:active {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.chat-header:hover {
-  background-color: #0a7d56;
+
+.new-chat-btn {
+  background-color: #03352f;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.new-chat-btn:hover {
+  background-color: #05463f;
 }

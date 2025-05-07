@@ -10,7 +10,7 @@ main().then(() => {
 
 
 async function main() {
-    await mongoose.connect('mongodb://localhost:27017/whatsapp');
+    await mongoose.connect('mongodb://localhost:27017/fakewhatsapp');
 }
 
 let allChats = [
